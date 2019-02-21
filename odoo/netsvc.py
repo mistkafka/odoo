@@ -222,6 +222,7 @@ DEFAULT_LOG_CONFIGURATION = [
     'odoo.http.rpc.response:INFO',
     ':INFO',
 ]
+# mistkafka 我觉得这种log开关配置很有意思~ 不错
 PSEUDOCONFIG_MAPPER = {
     'debug_rpc_answer': ['odoo:DEBUG', 'odoo.sql_db:INFO', 'odoo.http.rpc:DEBUG'],
     'debug_rpc': ['odoo:DEBUG', 'odoo.sql_db:INFO', 'odoo.http.rpc.request:DEBUG'],

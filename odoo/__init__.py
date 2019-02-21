@@ -83,27 +83,27 @@ def registry(database_name=None):
 #----------------------------------------------------------
 # Imports
 #----------------------------------------------------------
-from . import addons
-from . import conf
-from . import loglevels
-from . import modules
-from . import netsvc
-from . import osv
-from . import release
-from . import service
-from . import sql_db
-from . import tools
+from . import addons  # odoo的插件包路径，addons应该是可以有多个，例如根目录下的addons也是插件
+from . import conf  #  odoo的配置载入，但逻辑其实不在里面了
+from . import loglevels # 定义一些日志level，没什么内容
+from . import modules  # **重点** odoo的插件管理器（插件系统）
+from . import netsvc  # 配置日志
+from . import osv  # 旧的orm，弃用了
+from . import release  # 定义一些release信息
+from . import service  # odoo的RPC服务
+from . import sql_db  # PostgreSQL数据库的连接器
+from . import tools  # odoo的utils层，可以看一看，看看人家的utils组织方式
 
 #----------------------------------------------------------
 # Model classes, fields, api decorators, and translations
 #----------------------------------------------------------
-from . import models
-from . import fields
-from . import api
+from . import models  # **重点** odoo现在的ORM层
+from . import fields  # **重点** odoo的field meta
+from . import api  # 有点没看明白这里的api是什么层面的API。应该是RPC啊～ 但又好像不是。但大概明白，它处理了“上下文”注入的工作。
 from odoo.tools.translate import _
 
 #----------------------------------------------------------
 # Other imports, which may require stuff from above
 #----------------------------------------------------------
-from . import cli
-from . import http
+from . import cli  # **借鉴** odoo的命令行入口，诸如启动服务等命令。
+from . import http  # odoo 基于werkzeug封装出来的http层
