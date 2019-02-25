@@ -9,8 +9,8 @@
 
 已知：
 - [ ] `/odoo/modules` 插件系统
-- [ ] `/odoo/models` orm
-- [ ] `/odoo/fileds` meta字段
+- [x] `/odoo/models` orm
+- [x] `/odoo/fileds` meta字段
 
 
 未知：

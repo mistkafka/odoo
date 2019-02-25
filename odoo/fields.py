@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+# 看来odoo的field层，不单是承担传统的ORM职责，还提供了更高层面的api，如search、display value、label等meta数据、接口
+
 """ High-level objects for fields. """
 
 from collections import OrderedDict, defaultdict
